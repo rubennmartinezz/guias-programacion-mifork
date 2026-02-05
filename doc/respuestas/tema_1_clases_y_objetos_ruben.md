@@ -13,8 +13,6 @@ Por favor, escribe en impersonal las respuestas.
 ----
 -->
 
-# TEMA 1. Clases y objetos
-
 ## 1. ¿Cuáles son las cuatro características básicas de la programación orientada a objetos? Describe brevemente cada una
 
 ### Respuesta
@@ -232,7 +230,7 @@ Ahora, al hacer `System.out.println(punto);`, se mostrará algo como `Punto(3.0,
 ### Respuesta
 
 Una clase es conceptualmente similar a un `struct` en C en cuanto que ambos agrupan datos relacionados en una única estructura. Sin embargo, un `struct` en C es principalmente un contenedor de datos (atributos), mientras que una clase en Java combina datos con comportamiento (métodos). Un `struct` en C es "inerte", no sabe cómo hacer nada con sus datos.
-
+rl
 Para que un `struct` sea como una clase, le faltaría principalmente las funciones miembro y los modificadores de acceso (encapsulación). En C, podrías asociar funciones a un struct pasándolo como parámetro explícitamente (como se verá en la siguiente pregunta), pero carece de la integración que proporcionan los métodos. Las variables de tipo struct son instancias en el sentido técnico, pero no tienen identidad ni comportamiento como lo tienen los objetos en POO. Una clase proporciona una forma más integrada y segura de trabajar con estos conceptos, ocultando detalles internos y permitiendo un diseño más modular.
 
 
