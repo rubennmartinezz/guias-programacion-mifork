@@ -56,9 +56,9 @@ No todos los lenguajes orientados a objetos manejan explícitamente el concepto 
 
 ### Respuesta
 
-En la mayoría de lenguajes orientados a objetos, los objetos se almacenan en el **montículo** (heap), una región de memoria dinámica. Cuando se crea un objeto con `new`, se asigna espacio en el heap y se devuelve una referencia (dirección en memoria) a ese objeto. Las variables que guardan objetos contienen estas referencias, no el objeto en sí. Esta es una diferencia importante respecto a C, donde podrías usar structs en la pila o dinámicamente en el heap con `malloc`.
+En la mayoría de lenguajes orientados a objetos, los objetos se almacenan en el montículo (**heap**), una región de **memoria dinámica**(reservas lo que necesitas). Cuando se crea un objeto con `new`, se asigna espacio en el heap y se devuelve una referencia (dirección en memoria) a ese objeto. Las variables que guardan objetos contienen estas referencias, no el objeto en sí. Esta es una diferencia importante respecto a C, donde podrías usar structs en la pila o dinámicamente en el heap con `malloc`.
 
-El almacenamiento varía según el lenguaje: en C y C++ el programador es responsable de liberar la memoria con `free()` o `delete`, lo que puede causar memory leaks. En cambio, la **recolección de basura** es un mecanismo automático que algunos lenguajes (Java, Python, C#) emplean para liberar automáticamente la memoria de objetos que ya no se usan. El recolector de basura identifica objetos sin referencias activas y libera su memoria, eliminando la necesidad de gestión manual pero con cierto costo de rendimiento.
+El almacenamiento varía según el lenguaje: en C y C++ el programador es responsable de liberar la memoria con `free()` o `delete`, lo que puede causar memory leaks(fugas de memoria). En cambio, la **recolección de basura** es un mecanismo automático que algunos lenguajes (Java, Python, C#) emplean para **liberar automáticamente** la memoria de objetos que ya no se usan. El recolector de basura identifica objetos sin referencias activas y libera su memoria, eliminando la necesidad de gestión manual pero con cierto costo de rendimiento.
 
 
 ## 7. ¿Qué es un método? ¿Qué es la **sobrecarga de métodos**? 
@@ -105,7 +105,7 @@ public class Main {
 
 ### Respuesta
 
-El punto de entrada en Java es el método `main` con la firma `public static void main(String[] args)`. Cuando se ejecuta un programa Java, la máquina virtual busca este método y lo invoca automáticamente. La palabra clave **`static`** indica que el método o variable pertenece a la clase en sí, no a una instancia específica. Esto permite invocar el método sin necesidad de crear una instancia de la clase, lo cual es esencial para `main` ya que necesita un punto de partida antes de que existan objetos.
+El punto de entrada en Java es el método `main` con la firma `public static void main(String[] args)`. Cuando se ejecuta un programa Java, la máquina virtual busca este método y lo invoca automáticamente. La palabra clave **`static`** indica que el método o variable **pertenece a la clase** en sí, no a una instancia específica. Esto permite invocar el método sin necesidad de crear una instancia de la clase, lo cual es esencial para `main` ya que necesita un punto de partida antes de que existan objetos.
 
 La palabra `static` se usa también para variables miembro (atributos de clase) que son compartidos por todas las instancias, y para métodos de utilidad que no necesitan acceso a datos específicos de instancias. Cuando se combina `static` con **`final`**, se crea una constante de clase: un valor que pertenece a la clase, es único en toda la ejecución y no puede ser modificado. Por ejemplo, `public static final double PI = 3.14159;` define una constante que todas las instancias pueden usar pero no cambiar.
 
